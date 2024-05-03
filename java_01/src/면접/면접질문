@@ -116,3 +116,49 @@ private(같은 클래스) < default(같은 패키지) < protected(같은 패키�
    * - 상속을 통하여 자식클래스에서 추상메서드를 구현하고, 자식클래스 객체를 생성하여 메서드를 접근할 수 있다.  
    * 
    */
+   /*  p406 p439
+       * 해싱(hashing) : 키를 이용해서 해시테이블로부터 데이터를 가져오는 과정
+       * 
+       * [면접] p439
+       * HashMap
+       * 1) 특징
+       * - 데이터의 순서를 보장하지 않는다.
+       * - key와 value 쌍으로 저장한다.
+       * - key는 중복되면 안된다. 값은 중복되도 무관하다.
+       * - key를 이용해서 value를 가져올 수 있다.
+       * - List 계열과 달리 index가 없다.
+       * - Map이라는 인터페이를 구현한 클래스이다.
+       * 
+       * 2) 선언
+       * - HashMap<Key 클래스타입, value 클래스타입> map = new HashMap<Key 클래스타입, value 클래스타입>();
+       * - Map<Key 클래스타입, value 클래스타입> map = new HashMap<Key 클래스타입, value 클래스타입>(); // 다형성 적용
+       * 
+       * 3) 메서드
+       * - 데이터 추가 : put(key, value);
+       * - 데이터 가져오기 : get(key)
+       * - 데이터 삭제 : remove(key)
+       * - 데이터가 비어있는지 여부 : isEmpty()
+       * - 해당 키가 있는지 여부 : containsKey(key)
+       * - 해당 값이 있는지 여부 : containsValue(value)
+       * - 해당 갯수 : size()
+       */
+   /*
+       * [면접]
+       * 예외 처리 목적 : 정상종료
+       * 
+       * try {
+       *      // 예외가 발생할 수 있는 코드 부분
+       * } catch(처리할 예외타입 e) {
+       *    // try 블록안에서 예외가 발생했을 때 예외를 처리하는 부분
+       * } finally {
+       *      // 항상 수행되는 부분(예외가 발생하지 않더라도) 
+       *    // 주로 자원해제를 위한 close() 문장이 온다.
+       * }
+       * 1. 강제예외발생 : throw new Exception(message);
+       * 2. 상위 메서드에게 예외 던지기
+       *    throws Exception
+       * 3. 예외 처리
+       *    catch(던진 Exception e){e.getMaessage()}로 받는다.
+       * 
+       * catch문이 여러개일때(다중 catch) 부모 Exception이 제일 아래오도록 한다. 실행순서는 위에서부터 실행
+       */
